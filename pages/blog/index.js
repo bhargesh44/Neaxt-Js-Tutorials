@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
-
+import Head from "next/head";
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   const data = await res.json();
@@ -15,6 +15,9 @@ export const getStaticProps = async () => {
 const blog = ({ data }) => {
   return (
     <>
+      <Head>
+        <title>Blog Page </title>
+      </Head>
       <Navbar />
       {data.slice(0, 5).map((curElem) => {
         return (

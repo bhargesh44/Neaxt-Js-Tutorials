@@ -1,9 +1,11 @@
 import Navbar from "../components/Navbar";
-import styles from "../styles/contact.module.css";
-
+import Head from "next/head";
 const Contact = () => {
   return (
     <>
+      <Head>
+        <title>Contact Page </title>
+      </Head>
       <Navbar />
       {/* <h1 style={{ color: "green" }}>Hello World my contact </h1> */}
       <h1>Hello Contact Page </h1>
